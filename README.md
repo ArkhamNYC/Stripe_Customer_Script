@@ -13,6 +13,27 @@ Before you begin, ensure you have met the following requirements:
 - You have installed Python 3.7 or later.
 - You have a Stripe account and API key.
 
+## Generating Your Stripe API Key
+
+To use these scripts, you'll need a Stripe API secret key. Here's how to generate a new one:
+
+1. Log in to your Stripe Dashboard (https://dashboard.stripe.com/).
+2. In the left sidebar, click on "Developers".
+3. In the Developers section, click on "API keys".
+4. You'll see "Standard keys" and "Restricted keys". For this script, we'll use a Standard key.
+5. Click on "+ Create secret key" button in the "Standard keys" section.
+6. Give your key a descriptive name (e.g., "Customer Data Management Script").
+7. Choose whether this is for test mode or live mode. For testing, always use test mode first.
+8. Click "Create key".
+9. Your new secret key will be displayed. Copy this key immediately; you won't be able to see it again.
+
+**Important:**
+
+- Always use test mode keys when testing your integration.
+- Never share your live secret key or commit it to version control.
+- Each key should have a specific purpose. Consider creating a new key for each project or script.
+- If you suspect a key has been compromised, you can revoke it and generate a new one from this same page.
+
 ## Installing the Scripts
 
 To install the scripts, follow these steps:
@@ -40,11 +61,11 @@ To install the scripts, follow these steps:
 ## Setting up the .env file
 
 1. Create a new file named `.env` in the same directory as the scripts.
-2. Add your Stripe API key to the `.env` file:
+2. Add your newly generated Stripe API key to the `.env` file:
    ```
-   STRIPE_API_KEY=your_stripe_api_key_here
+   STRIPE_API_KEY=your_new_stripe_api_key_here
    ```
-   Replace `your_stripe_api_key_here` with your actual Stripe API key.
+   Replace `your_new_stripe_api_key_here` with the new API secret key you just generated.
 
 ## Using the Scripts
 
